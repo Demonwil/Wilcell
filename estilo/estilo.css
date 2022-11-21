@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap');
+@import 'mediaqueries.css';
+@font-face{
+  font-family: DRagonlord;
+  src: url(fuente/Dragonlord-WyJZn.otf)
+}
+@font-face{
+  font-family: FoundationOne;
+  src: url(fuente/FoundationOne.ttf) format('truetype');
+
+}
+* {
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.logo{
+    height: 60px;
+}
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/ban.jpg);
+  max-width: 100%;
+  /* PARA QUE NO SE REPITA LA IMAGEN */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header{
+  background-color: #000;
+}
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  padding: 30px;
+}
+
+.navbar .brand {
+  color: #f7b733;
+}
+
+.navbar .menu {
+  grid-column: 6 / 9;
+  display: flex;
+  margin-top: 12px;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu li a {
+  text-decoration: none;
+  margin-right: 3em;
+  font-size: 1.3em;
+  color: #fff;
+  font-weight: 200;
+  padding: 10px 20px;
+}
+.menu li a:hover {
+  background-color: #f7b733;
+  transition: all .5s;
+  color: #000;
+}
+
+.menu-bar {
+  display: none;
+}
+
+/* MENU SECCION */
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.content-info {
+  margin-top: 5em;
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+  color: #fff;
+  box-shadow: 0px 3px 14px -8px rgba(0,0,0,0.78);
+}
+button:hover {
+  box-shadow: none;
+}
+
+.btn-toBuy, .read-more {
+  /* background-image: linear-gradient(270deg, #ff2dc7 0, #ff24d0 12.5%, #ef1dd9 25%, #da1be1 37.5%, #c11ee9 50%, #a325f1 62.5%, #7e2ef8 75%, #4537ff 87.5%, #003fff 100%); */
+  background-color: #8c50f1;
+  padding: 8px 40px;
+  font-size: 1.2em;
+  border-radius: 20px;
+  border: none;
+}
+
+.read-more {
+  background: none;
+  border: 1px solid #fff;
+  margin: 20px;
+}
+.ubica{
+  color: aliceblue;
+  font-size: 20px;
+  
+}
+
+.main img {
+  margin-top: 3em;
+}
+
+
+/* FIN SECCION */
+
+.about h2 {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: .3em;
+}
+/* DIVISION DE PRODUCTOS */
+.about .divider, .products .divider {
+  background-color: #f7b733;
+  width: 100px;
+  height: 3px;
+  margin: 0 auto;
+}
+.products .divider {
+  margin-bottom: 5em;
+}
+
+.about .about-content {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  display: flex;
+  align-items: center;
+}
+
+.about .about-info {
+  margin: 4em;
+}
+
+.about .about-info h3 {
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+/* DISCOGRAFÍA SECCION */
+
+.products h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+
+
+.products .container-products {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.content-products-info,
+.content-price,
+.btn-content {
+  display: flex;
+  justify-content: center;
+}
+
+.content-product-info {
+  display: flex;
+  justify-content: center;
+}
+
+.content-product-info .stars {
+  margin-right: 20px;
+  text-align: center;
+
+}
+.content-product-info h4 {
+  text-transform: uppercase;
+  text-align: center;
+}
+/* PRECIOS */
+
+
+.products .content-price .antes {
+  text-decoration: line-through;
+  font-weight: lighter;
+  margin-right: 20px;
+}
+
+.products .content-price .ahora {
+  background-color: #f7b733;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 50px;
+}
+
+
+
+
+.products .btn-product {
+  margin: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  color: #000;
+}
+
+
+
+
+
+
+
+
+
+.footer {
+  background-color: #f5a301;
+  color: #fff;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer .menu li {
+  margin-top: 10px;
+}
+
+.footer .social-network .fab {
+  font-size: 1.8em;
+  margin: 10px;
+}
+/* REDES SOCIALES SELECCION */
+.footer .social-network .fab:hover {
+  color: #ec0000;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  
+
+
+  .hero {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    background-color: #5c2196;
+    height: 80px;
+    box-shadow: 2px 2px 15px 0px  rgba(0, 0, 0, .42);
+    align-items: center;
+  }
+  .navbar h2 {
+    font-size: 2em;
+  }
+  .navbar .menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    background-color: #5c2196;
+    height: 70vh;
+    left: -1em;
+    transform: translateY(-120%);
+    transition: all 1.4s;
+    z-index: 1;
+  }
+  .navbar .menu-toggle {
+    transform: translateY(0%);
+  }
+  .menu li {
+    margin-top: 3em;
+  }
+  .navbar .menu-bar {
+    display: block;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* MENU SECCION */
+
+  .main {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    height: 70vh;
+  }
+  .main img {
+    width: 12em;
+  }
+  .main h1 {
+    margin-top: -80px;
+  }
+  .main .button-content {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+  }
+  
+ /* ABOUT SECTION */
+
+
+  .about .about-content img {
+    width: 300px;
+    margin-top: 50px;
+  }
+
+  .about .about-content {
+    flex-direction: column;
+  }
+  
+  .about .about-content .about-info {
+    margin-top: -10px;
+    text-align: center;
+  }
+ 
+   /* DISCOGRAFIA SECCION */
+
+   .products .container-products {
+     display: flex;
+     flex-direction: column;
+   }
+   .products h2 {
+     font-size: 2em;
+     margin-top: 2em;
+   }
+
+   .products .container-products .btn-product {
+     margin-bottom: 3em;
+   }
+
+    /* GALERIA SECCION */
+
+  
+    /* CIUDAD SECCION */
+
+
+    #banner {
+      height: 50vh;
+      background-position: center;
+    }
+
+    .banner .rating img {
+      width: 50px;
+
+    }
+    .banner .rating h2 {
+      font-size: 2em;
+    }
+
+    .banner .secundary-info {
+      display: none;
+    }
+
+  /* FOOTER SECCION */
+
+    .footer {
+      flex-direction: column-reverse;
+    }
+
+    .footer .quicklinks .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    } 
+
+    .footer .social-network {
+      margin: 2em;
+    }
+    .footer h3 {
+      font-weight: lighter;
+      margin-top: 1em;
+      color: #fff;
+    }
+    .marca-nombre h2{
+      font-size: 8px;
+    }
+}

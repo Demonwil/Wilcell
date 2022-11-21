@@ -1,0 +1,28 @@
+@font-face{
+    font-family: FoundationOne;
+    src: url(fuente/FoundationOne.ttf) format('truetype');
+  
+  }
+#map {
+	height: 500px;
+	width: 100%;
+}
+.btn{
+    display: flex;  
+	justify-content: center;
+	align-items: center;
+    background: #000;
+    color: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+	text-align: center;
+	font-family: FoundationOne;
+}
+.btn #map:hover{
+	background: #f5a301;
+}
+@media only screen and (max-width: 600px){
+	#map{
+		background-position: center;
+	}
+}
